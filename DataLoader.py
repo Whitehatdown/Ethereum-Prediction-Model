@@ -8,7 +8,7 @@ df = pd.read_csv(file_path)
 df['Date'] = pd.to_datetime(df['Date'])
 
 # Remove commas from numerical columns
-numeric_columns = ['Price', 'Open', 'High', 'Low', 'Vol.', 'Change ']
+numeric_columns = ['Close', 'Open', 'High', 'Low', 'Vol.', 'Change ']
 df[numeric_columns] = df[numeric_columns].replace({',': ''}, regex=True)
 
 # Handle 'K', 'M', 'B' in the 'Vol.' column
